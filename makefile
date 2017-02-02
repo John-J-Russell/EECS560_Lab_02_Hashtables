@@ -14,4 +14,4 @@ OpenHashtable.o: OpenHashtable.cpp DoubleLinkedList.h
 	g++ -g -Wall -std=c++11 -c OpenHashtable.cpp
 
 clean:
-	rm *.o ProgramName
+	rm *.o OpenHashtableProgram
