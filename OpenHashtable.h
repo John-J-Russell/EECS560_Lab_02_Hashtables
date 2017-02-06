@@ -15,51 +15,58 @@ class OpenHashtable
 {
 	public:
 	/*
-		@PRE:	
-		@POST:	
-		@RETURN:
+		@PRE:	is passed a positive integer for table size
+		@POST:	creates an open hashtable w/ chaining of given size,
+			and empty doublelinkedlists in each "slot"
+		@RETURN:none
 	*/
 	OpenHashtable(int size_of_table);
 
 	/*
-		@PRE:	
-		@POST:	
-		@RETURN:
+		@PRE:	No illegal actions have occurred on the table
+		@POST:	hashtable and all lists therein are destroyed
+		@RETURN:none
 	*/
 	~OpenHashtable();
 
 	/*
-		@PRE:	
-		@POST:	
-		@RETURN:
+		@PRE:	is passed an integer value
+		@POST:	inserts value to front of list in corresponding key
+			slot. If value is already present, then insertion is
+			aborted without warning, and it goes back to user
+			interfacing
+		@RETURN:none
 	*/
 	void insert(int value_to_insert);
 
 	/*
-		@PRE:	
-		@POST:	
-		@RETURN:
+		@PRE:	is passed an integer value
+		@POST:	value is removed from its table key list, if present.
+			If not present, then operation is aborted without warning,
+			and program returns to whatever it was doing prior.
+		@RETURN:none
 	*/
 	void deleteNode(int value_to_remove);
 
 	/*
-		@PRE:	
-		@POST:	
-		@RETURN:
+		@PRE:	none
+		@POST:	table is printed out to terminal
+		@RETURN:none
 	*/
 	void print();
 
 	/*
-		@PRE:	
-		@POST:	
-		@RETURN:
+		@PRE:	is passed an integer and table was correctly instantiated
+		@POST:	none
+		@RETURN:the hashed/table key value of passed value
 	*/
 	int hash(int value_to_hash);
 
 	/*
-		@PRE:	
-		@POST:	
-		@RETURN:
+		@PRE:	none
+		@POST:	none
+		@RETURN:"true" if value has been inserted and is currently a member
+			of the table, false otherwise.
 	*/
 	bool find(int value_to_find);
 

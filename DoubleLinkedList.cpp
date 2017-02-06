@@ -48,7 +48,7 @@ void DoubleLinkedList::print()
 {
 	if(m_first == nullptr)
 	{
-		std::cout<<"List is empty \n\n";
+		std::cout<<"List is empty \n";
 	}
 	else
 	{

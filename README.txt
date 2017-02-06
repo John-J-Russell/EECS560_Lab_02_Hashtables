@@ -11,7 +11,7 @@ Data file must be formatted as follows, with only integer values:
 TABLE_SIZE (a prime number)
 number entry
 number entry
-etc
-etc
+...
+number entry
 [file end]
 
